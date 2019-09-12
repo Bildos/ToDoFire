@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B9B4A83232AD2040071F392 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B4A82232AD2040071F392 /* Task.swift */; };
+		3B9B4A85232AD2130071F392 /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B4A84232AD2130071F392 /* MyUser.swift */; };
 		3BAC6CD4231EF6E0005AC1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC6CD3231EF6E0005AC1D8 /* AppDelegate.swift */; };
 		3BAC6CD6231EF6E0005AC1D8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAC6CD5231EF6E0005AC1D8 /* LoginViewController.swift */; };
 		3BAC6CD9231EF6E0005AC1D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAC6CD7231EF6E0005AC1D8 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		20C202E3C96E0A0BC4D7EBA3 /* Pods-ToDoFire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoFire.debug.xcconfig"; path = "Target Support Files/Pods-ToDoFire/Pods-ToDoFire.debug.xcconfig"; sourceTree = "<group>"; };
+		3B9B4A82232AD2040071F392 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		3B9B4A84232AD2130071F392 /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
 		3BAC6CD0231EF6E0005AC1D8 /* ToDoFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAC6CD3231EF6E0005AC1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BAC6CD5231EF6E0005AC1D8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 			children = (
 				3BAC6CD5231EF6E0005AC1D8 /* LoginViewController.swift */,
 				3BAC6CE5231F05CD005AC1D8 /* TasksViewController.swift */,
+				3B9B4A82232AD2040071F392 /* Task.swift */,
+				3B9B4A84232AD2130071F392 /* MyUser.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -110,7 +116,6 @@
 				20C202E3C96E0A0BC4D7EBA3 /* Pods-ToDoFire.debug.xcconfig */,
 				B8569EAF3C308DBFF7F9F6D1 /* Pods-ToDoFire.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -242,7 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9B4A83232AD2040071F392 /* Task.swift in Sources */,
 				3BAC6CD6231EF6E0005AC1D8 /* LoginViewController.swift in Sources */,
+				3B9B4A85232AD2130071F392 /* MyUser.swift in Sources */,
 				3BAC6CD4231EF6E0005AC1D8 /* AppDelegate.swift in Sources */,
 				3BAC6CE6231F05CD005AC1D8 /* TasksViewController.swift in Sources */,
 			);

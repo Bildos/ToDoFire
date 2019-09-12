@@ -13,8 +13,13 @@ class LoginViewController: UIViewController {
     @IBOutlet var notExist: UILabel!
     @IBOutlet var userPassword: UITextField!
     @IBOutlet var userEmail: UITextField!
+    
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference(withPath: "users")
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil)
         
@@ -85,14 +90,28 @@ class LoginViewController: UIViewController {
             return
     }
         
-        Auth.auth().createUser(withEmail: email, password: password) {[weak self] (user, error) in
-            if error == nil {
-                if user != nil {
-                    self?.performSegue(withIdentifier: "tasks", sender: nil)
-                    
-                }
-                }
+//        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
+//            guard error == nil, user != nil else {
+//                print(error!.localizedDescription)
+//                return
+//            }
+//            let userRef = self?.ref.child((user?.uid)!)
+//            userRef?.setValue(["email": user?.email])
+//           print(user)
+//            })
+ 
+        
+        
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            guard error == nil, authResult != nil else {
+                print(error!.localizedDescription)
+                return
             }
+            let userRef = self.ref.child((authResult?.user.uid)!)
+            userRef.setValue(["email": authResult?.user.email])
         }
+    
+    
+    }
 }
 
